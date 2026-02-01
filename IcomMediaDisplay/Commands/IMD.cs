@@ -11,8 +11,6 @@ namespace IcomMediaDisplay.Commands
         public string[] Aliases => ["imd"];
         public string Description => "Play a Media on Intercom.";
 
-        PlaybackHandler playbackHandler;
-
         public bool Execute(ArraySegment<string> arguments, ICommandSender sender, out string response)
         {
             if (!((CommandSender)sender).CheckPermission("imd.command"))
@@ -20,7 +18,6 @@ namespace IcomMediaDisplay.Commands
                 response = "You do not have permission to use this command!";
                 return false;
             }
-            playbackHandler = IcomMediaDisplay.GetPHInstance();
             switch (arguments.At(0))
             {
                 case "play":
@@ -36,7 +33,7 @@ namespace IcomMediaDisplay.Commands
                     }
                     try
                     {
-                        playbackHandler.PlayFrames(IcomMediaDisplay.PluginDirectory + "/" + arguments.At(1));
+                        IcomMediaDisplay.playbackHandler.PlayFrames(IcomMediaDisplay.PluginDirectory + "/" + arguments.At(1));
                         response = "Playback started (Keep an eye on Server console, if debug enabled).";
                         return true;
                     }
