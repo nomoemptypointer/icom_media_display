@@ -1,7 +1,7 @@
 # IcomMediaDisplay
 
 # Information
-Due to unmotivation to continue writing EXILED plugins and not being so interested in the game, I am not going to work on this plugin, prs welcome
+Due to not being motivated enough to continue writing EXILED plugins and not being so interested in the game, I am not going to work on this plugin, prs welcome
 
 ## Description
 The IcomMediaDisplay (IMD) plugin for SCP: Secret Laboratory enhances the Intercom system by allowing the playback of exported frames (images) in a specified folder or container. This feature enables server administrators to create immersive and dynamic communication experiences using visual media.
